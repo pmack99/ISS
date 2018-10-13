@@ -1,0 +1,63 @@
+.background {
+  height: 2000px;
+  width: 100%;
+  background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/iss056e162811.jpg");
+  background-size: cover;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+}
+
+#mapId {
+  height: 400px;
+  border: goldenrod solid 2px;
+  background-color: none;
+  border-radius: 25px;
+}
+
+#mapBox {
+  background: none;
+  font-family: "Anton", sans-serif;
+  margin:10px;
+  padding: 10px;
+  text-align: center;
+  
+}
+
+.container {
+  background: none;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+.display-4{
+  font-family: "Questrial", sans-serif;
+  font-size: 60px;
+}
+
+
+.jumbotron{
+    padding-top: 5px;
+    padding-bottom: 20px;
+    width:auto;
+    margin:20px;
+    margin-top: 5px;
+    background: rgba(200, 200, 200, 0.5); 
+    border-radius: 25px;
+    border: goldenrod solid 2px;
+}
+
+.issInfo{
+  font-family: "Josefin Sans", sans-serif;
+  margin:10px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+font-family: "Josefin Sans", sans-serif;
+font-family: "Anton", sans-serif;
+font-family: "Questrial", sans-serif;
