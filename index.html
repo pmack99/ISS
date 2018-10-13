@@ -55,9 +55,42 @@
 
 
     <div class="container">
- 
+
+        <div class="jumbotron">
+            <br>
+            <label for="basic-url">Enter a city and state to find out when the International Space Station will pass
+                overhead next</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend col-xs-2">
+                    <button class="btn btn-warning" type="button" id="button-addon1">Enter</button>
+                </div>
+                <input type="text" class="form-control " placeholder="Example - Orlando, FL" aria-label="Example text with button addon"
+                    aria-describedby="button-addon1">
+            </div>
+
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th scope="col">ISS Pass dates</th>
+                        <th scope="col">Duration</th>
+                        <th scope="col">Starts</th>
+                        <th scope="col">Start Elevation</th>
+                        <th scope="col">Max Elevation</th>
+                        <th scope="col">Departs</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td></td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    </div>
+ </div>
 
 
 
@@ -108,9 +141,9 @@
                     var solar_lonN = solar_lon.toFixed(4);
 
                     $("#latitudeN").text("Latitude: " + latitudeN),
-                    $("#longitudeN").text("Longitude: " + longitudeN),
-                    $("#altitude").text("Altitude: " + altitudeN + " KM"),
-                    $("#velocity").text("Velocity: " + velocityN + " KPH");
+                        $("#longitudeN").text("Longitude: " + longitudeN),
+                        $("#altitude").text("Altitude: " + altitudeN + " KM"),
+                        $("#velocity").text("Velocity: " + velocityN + " KPH");
                     $("#solar_latN").text("Solar Latitude: " + solar_latN);
                     $("#solar_lonN").text("Solar Longitude: " + solar_lonN);
                     $("#visibility").text("Visibility: " + visibility);
@@ -142,7 +175,7 @@
             setTimeout(moveIss, 4000);
 
         }
-        
+
         moveIss();
 
 
