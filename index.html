@@ -54,8 +54,8 @@
     <div class="container">
         <div class="jumbotron">
             <br>
-        <h2>Enter a city to find out when the International Space Station will pass
-        overhead next</h2>
+            <h2>Enter a city to find out when the International Space Station will pass
+                overhead next</h2>
             <div class="input-group mb-3">
                 <div class="input-group-prepend ">
                     <button class="button btn-warning" type="button" id="button-addon1">Enter</button>
@@ -85,6 +85,13 @@
             </table>
         </div>
     </div>
+    <div class="container">
+        <div class="jumbotron" id="results">
+            <h2>Search Results</h2>
+            <hr>
+        </div>
+    </div>
+
     </div>
 
 
@@ -172,8 +179,6 @@
         moveIss();
 
 
-
-
         var time = 0;
         var duration = 0;
         var whereStart = [];
@@ -183,13 +188,13 @@
         var startEl = 0;
         var maxEl = 0;
         var passcount = 0;
-        var userInput;
-        var cityState;
-        var apiKeyMapquest;
+        var userInput = 0;
+        var cityState = 0;
+        var apiKeyMapquest = 0;
 
 
         $(".button").on("click", function (event) {
-            
+
             event.preventDefault();
             $("tbody").empty(" ");
 
@@ -268,10 +273,27 @@
                                     $("<td>").text(whereStart),
                                     $("<td>").text(howHigh),
                                     $("<td>").text(maxHigh),
-                                    $("<td>").text(whereEnd),
+                                    $("<td>").text(whereEnd)
                                 );
 
                                 $("tbody").append(newRow);
+
+                                var resultsDiv = $("<div>").prepend(
+
+                                    resultsDiv.append(cityState),
+                                    resultsDiv.append(dateString),
+                                    resultsDiv.append("ISS appears from the " + whereStart),
+                                    resultsDiv.append("Starting Elevation = " + howHigh),
+                                    resultsDiv.append("Maximum Elevation = " + maxHigh),
+                                    resultsDiv.append("ISS disappears to the " + whereEnd),
+
+                                );
+
+                               
+                                $("#results").append(resultsDiv)
+
+
+
                             }
                         }
 
