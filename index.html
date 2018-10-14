@@ -55,7 +55,7 @@
         <div class="jumbotron">
             <br>
             <h2>Enter a city to find out when the International Space Station will pass
-                overhead next</h2>
+                overhead</h2>
             <div class="input-group mb-3">
                 <div class="input-group-prepend ">
                     <button class="button btn-warning" type="button" id="button-addon1">Enter</button>
@@ -89,8 +89,8 @@
     </div>
     </div>
     <div class="container">
-        <div class="jumbotron" id="results">
-            <h2>Search Results</h2>
+        <div class="jumbotron" id="photos">
+            
             <hr>
         </div>
     </div>
@@ -270,7 +270,7 @@
                                 console.log("ISS disappears to the " + whereEnd);
 
 
-                                var newRow = $("<tr>").prepend(
+                                var newRow = $("<tr>").append(
 
                                     $("<td>").text(cityState),
                                     $("<td>").text(dateString),
