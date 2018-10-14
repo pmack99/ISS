@@ -63,20 +63,20 @@
                 <input type="text" class="form-control col-md-5 " placeholder="Example - Orlando, FL">
             </div>
             <div class="scrollit">
-            <table class="table">
-                <div id="tableScroll">
-                    <thead>
-                        <tr>
-                            <th scope="col">City</th>
-                            <th scope="col">ISS Pass</th>
-                            <th scope="col">Duration</th>
-                            <th scope="col">Starts</th>
-                            <th scope="col">Start Elevation</th>
-                            <th scope="col">Max Elevation</th>
-                            <th scope="col">Departs</th>
-                        </tr>
-                    </thead>
-                    
+                <table class="table">
+                    <div id="tableScroll">
+                        <thead>
+                            <tr>
+                                <th scope="col">City</th>
+                                <th scope="col">ISS Pass</th>
+                                <th scope="col">Duration</th>
+                                <th scope="col">Appears</th>
+                                <th scope="col">Start Elevation</th>
+                                <th scope="col">Max Elevation</th>
+                                <th scope="col">Departs</th>
+                            </tr>
+                        </thead>
+
                         <tbody>
                             <tr>
                                 <td></td>
@@ -84,14 +84,20 @@
                             </tr>
                         </tbody>
                     </div>
-            </table>
+                </table>
+            </div>
         </div>
     </div>
-    </div>
     <div class="container">
-        <div class="jumbotron" id="photos">
+        <div class="row apod">
+            <div class="col-12" id="text">
+            <h2>Images from the ISS from the NASA Image Archive</h2>
+            </div>
+        <div class="row">
+                <div class="col-12" id="apod1"> </div>
+        </div>
             
-            <hr>
+
         </div>
     </div>
 
@@ -294,6 +300,39 @@
 
             });
         });
+
+        var i = 0;
+        var queryURL = "https://images-api.nasa.gov/search?q=iss&media_type=image"
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        })
+
+            .then(function (response) {
+                console.log(response);
+
+                function issImages() {
+
+                    $("#apod1 img").remove();
+
+
+                    i = Math.floor(Math.random() * 99 + 1);
+                    console.log(i);
+
+                    var apod = response.collection.items[i].links[0].href;
+                    var image = $("<img>").attr("src", apod).attr("class", "img-fluid").attr("alt", "Responsive image").attr("class", "float-right").attr("class", "rounded");
+
+                    $("#apod1").append(image);
+
+                    setTimeout(issImages, 9000);
+
+                }
+
+                issImages();
+
+
+            });
 
 
 
