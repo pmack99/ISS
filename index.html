@@ -28,6 +28,33 @@
 <body>
     <div class=background></div>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/iss2.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            ISS Tracker
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+
     <div class="container">
         <br>
         <div class="jumbotron">
@@ -91,23 +118,70 @@
     <div class="container">
         <div class="row apod">
             <div class="col-12" id="apodText">
-            <h2>Images of the ISS from the NASA Image Archive</h2>
+                <h2>Images of the ISS from the NASA Image Archive</h2>
             </div>
-        <div class="row">
+            <div class="row">
                 <div class="col-12" id="apod1"> </div>
-               
-        </div>
-        <div class="row">
+
+            </div>
+            <div class="row">
                 <div class="col-12" id="apod2"> </div>
                 <div class="caption text"></div>
-        </div>
-            
+            </div>
+
 
         </div>
     </div>
 
     </div>
 
+    <div class="container">
+        <footer class="page-footer font-small teal pt-4">
+
+            <!-- Footer Text -->
+            <div class="container-fluid text-center text-md-left">
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+
+                        <!-- Content -->
+                        <h5 class="text-uppercase font-weight-bold">About this project</h5>
+                        <p>My name is Preston Mack. I am currently enrolled in the University of Central Florida's Coding Bootcamp. The first group project required us to develop an app that utilized multiple APIs. This ISS Tracker was the result. For this website, I rewrote much of the code, stripping away extraneous features like Firebase, and making it more of a mobile app.
+                            Thanks to my wonderful partners Sarah Sefcik, Jennifer Gibson and Christine Deer.  </p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                    <hr class="clearfix w-100 d-md-none pb-3">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 mb-md-0 mb-3">
+
+                        <!-- Content -->
+                        <h5 class="text-uppercase font-weight-bold">About this site</h5>
+                        <p>Track the International Space Station with this website. You can see its current position in the top map. This map refreshes every 9 seconds. 
+                             If you would like to know when it will pass over a particular city, enter that city and the next visible passes will be listed. The bottom has an NASA image gallery that refreshes every 25 seconds. The image caption is below.</p>
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+            </div>
+            <!-- Footer Text -->
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2018 Copyright:
+                <a href="http://www.pmack.com"> Preston Mack</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+    </div>
 
     </div>
 
@@ -328,8 +402,8 @@
                     var apod = response.collection.items[i].links[0].href;
                     var image = $("<img>").attr("src", apod).attr("class", "img-fluid").attr("alt", "Responsive image").attr("class", "float-right").attr("class", "rounded");
                     var caption = response.collection.items[i].data[0].description;
-                    
-                    
+
+
                     $("#apod1").append(image);
                     $(".caption").append(caption);
 
