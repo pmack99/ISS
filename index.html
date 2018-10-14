@@ -64,10 +64,11 @@
             </div>
 
             <table class="table">
-
+                <div id="tableScroll">
                 <thead>
                     <tr>
-                        <th scope="col">ISS Pass dates</th>
+                        <th scope="col">City</th>
+                        <th scope="col">ISS Pass</th>
                         <th scope="col">Duration</th>
                         <th scope="col">Starts</th>
                         <th scope="col">Start Elevation</th>
@@ -83,6 +84,7 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
         </div>
     </div>
     <div class="container">
@@ -196,7 +198,7 @@
         $(".button").on("click", function (event) {
 
             event.preventDefault();
-            $("tbody").empty(" ");
+            //$("tbody").empty(" ");
 
             var apiKeyMapquest = "VhIG9vrD4t2JMvh5f9k61v8rcGERpvxV";
             var userInput = $("input").val();
@@ -247,6 +249,7 @@
                             for (var i = 0; i < response.passes.length; i++) {
                                 var time = response.passes[i].startUTC;
 
+
                                 var dateString = moment.unix(time).format('LLLL');
                                 console.log(dateString);
 
@@ -268,6 +271,7 @@
 
                                 var newRow = $("<tr>").prepend(
 
+                                    $("<td>").text(cityState),
                                     $("<td>").text(dateString),
                                     $("<td>").text(duration),
                                     $("<td>").text(whereStart),
@@ -278,19 +282,7 @@
 
                                 $("tbody").append(newRow);
 
-                                var resultsDiv = $("<div>").prepend(
 
-                                    resultsDiv.append(cityState),
-                                    resultsDiv.append(dateString),
-                                    resultsDiv.append("ISS appears from the " + whereStart),
-                                    resultsDiv.append("Starting Elevation = " + howHigh),
-                                    resultsDiv.append("Maximum Elevation = " + maxHigh),
-                                    resultsDiv.append("ISS disappears to the " + whereEnd),
-
-                                );
-
-                               
-                                $("#results").append(resultsDiv)
 
 
 
@@ -312,7 +304,22 @@
 
 
 
-    <!-- Optional JavaScript -->
+    <!-- Optional JavaScript 
+    
+    
+                                    var resultsDiv = $("<div>").prepend(
+
+                                    resultsDiv.append(cityState),
+                                    resultsDiv.append(dateString),
+                                    resultsDiv.append("ISS appears from the " + whereStart),
+                                    resultsDiv.append("Starting Elevation = " + howHigh),
+                                    resultsDiv.append("Maximum Elevation = " + maxHigh),
+                                    resultsDiv.append("ISS disappears to the " + whereEnd),
+
+                                );
+
+                               
+                                $("#results").append(resultsDiv)-->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
