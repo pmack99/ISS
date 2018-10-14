@@ -62,30 +62,31 @@
                 </div>
                 <input type="text" class="form-control col-md-5 " placeholder="Example - Orlando, FL">
             </div>
-
+            <div class="scrollit">
             <table class="table">
                 <div id="tableScroll">
-                <thead>
-                    <tr>
-                        <th scope="col">City</th>
-                        <th scope="col">ISS Pass</th>
-                        <th scope="col">Duration</th>
-                        <th scope="col">Starts</th>
-                        <th scope="col">Start Elevation</th>
-                        <th scope="col">Max Elevation</th>
-                        <th scope="col">Departs</th>
-                    </tr>
-                </thead>
+                    <thead>
+                        <tr>
+                            <th scope="col">City</th>
+                            <th scope="col">ISS Pass</th>
+                            <th scope="col">Duration</th>
+                            <th scope="col">Starts</th>
+                            <th scope="col">Start Elevation</th>
+                            <th scope="col">Max Elevation</th>
+                            <th scope="col">Departs</th>
+                        </tr>
+                    </thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td></td>
 
-                <tbody>
-                    <tr>
-                        <td></td>
-
-                    </tr>
-                </tbody>
+                            </tr>
+                        </tbody>
+                    </div>
             </table>
         </div>
-        </div>
+    </div>
     </div>
     <div class="container">
         <div class="jumbotron" id="results">
@@ -280,7 +281,7 @@
                                     $("<td>").text(whereEnd)
                                 );
 
-                                $("tbody").append(newRow);
+                                $("tbody").prepend(newRow);
 
 
 
@@ -304,22 +305,7 @@
 
 
 
-    <!-- Optional JavaScript 
-    
-    
-                                    var resultsDiv = $("<div>").prepend(
-
-                                    resultsDiv.append(cityState),
-                                    resultsDiv.append(dateString),
-                                    resultsDiv.append("ISS appears from the " + whereStart),
-                                    resultsDiv.append("Starting Elevation = " + howHigh),
-                                    resultsDiv.append("Maximum Elevation = " + maxHigh),
-                                    resultsDiv.append("ISS disappears to the " + whereEnd),
-
-                                );
-
-                               
-                                $("#results").append(resultsDiv)-->
+    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
