@@ -90,11 +90,16 @@
     </div>
     <div class="container">
         <div class="row apod">
-            <div class="col-12" id="text">
+            <div class="col-12" id="apodText">
             <h2>Images of the ISS from the NASA Image Archive</h2>
             </div>
         <div class="row">
                 <div class="col-12" id="apod1"> </div>
+               
+        </div>
+        <div class="row">
+                <div class="col-12" id="apod2"> </div>
+                <div class="caption text"></div>
         </div>
             
 
@@ -200,7 +205,7 @@
         var userInput = 0;
         var cityState = 0;
         var apiKeyMapquest = 0;
-
+        var caption = [];
 
         $(".button").on("click", function (event) {
 
@@ -315,17 +320,20 @@
                 function issImages() {
 
                     $("#apod1 img").remove();
-
+                    $(".caption").html(" ");
 
                     i = Math.floor(Math.random() * 99 + 1);
                     console.log(i);
 
                     var apod = response.collection.items[i].links[0].href;
                     var image = $("<img>").attr("src", apod).attr("class", "img-fluid").attr("alt", "Responsive image").attr("class", "float-right").attr("class", "rounded");
-
+                    var caption = response.collection.items[i].data[0].description;
+                    
+                    
                     $("#apod1").append(image);
+                    $(".caption").append(caption);
 
-                    setTimeout(issImages, 9000);
+                    setTimeout(issImages, 20000);
 
                 }
 

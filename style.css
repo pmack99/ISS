@@ -1,5 +1,5 @@
 .background {
-  height: 2000px;
+  height: 2500px;
   width: 100%;
   background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/iss056e162811.jpg");
   background-size: cover;
@@ -20,10 +20,9 @@
 #mapBox {
   background: none;
   font-family: "Anton", sans-serif;
-  margin:10px;
+  margin: 10px;
   padding: 10px;
   text-align: center;
-  
 }
 
 .container {
@@ -32,58 +31,65 @@
   margin: 10px;
 }
 
-
-.display-4{
+.display-4 {
   font-family: "Questrial", sans-serif;
   font-size: 60px;
 }
 
-h2{
+h2 {
   font-family: "Questrial", sans-serif;
   font-size: 35px;
 }
 
-
-.jumbotron{
-    padding-top: 5px;
-    padding-bottom: 20px;
-    width:auto;
-    margin:10px;
-    margin-top: 5px;
-    background: rgba(200, 200, 200, 0.3); 
-    border-radius: 25px;
-    border: goldenrod solid 1px;
+.jumbotron {
+  padding-top: 5px;
+  padding-bottom: 20px;
+  width: auto;
+  margin: 10px;
+  margin-top: 5px;
+  background: rgba(200, 200, 200, 0.3);
+  border-radius: 25px;
+  border: goldenrod solid 1px;
 }
 
-.issInfo{
+.issInfo {
   font-family: "Josefin Sans", sans-serif;
-  margin:10px;
+  margin: 10px;
   padding: 20px;
   text-align: center;
 }
 
-.table{
-  height:300px;
-  overflow:auto;
+.table {
+  height: 300px;
+  overflow: auto;
 }
 
 .scrollit {
-  overflow:scroll;
-  height:300px;
+  overflow: scroll;
+  height: 300px;
 }
 
 #apod1{
   margin: 20px;
-
+  max-height: 100%;
+  max-width: 100%;
 }
 
-.apod{
+.caption {
+  height: 100px;
+  overflow: scroll;
+  margin: 40px;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.apod {
   padding-top: 20px;
   padding-bottom: 20px;
-  width:auto;
-  margin:10px;
+  width: auto;
+  margin: 10px;
   margin-top: 10px;
-  background: rgba(200, 200, 200, 0.3); 
+  background: rgba(200, 200, 200, 0.3);
   border-radius: 25px;
   border: goldenrod solid 1px;
   text-align: center;
