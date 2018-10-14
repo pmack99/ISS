@@ -215,7 +215,7 @@
                 var lat = results[0].locations[0].displayLatLng.lat;
                 var lon = results[0].locations[0].displayLatLng.lng;
 
-                var queryURL = "http://www.n2yo.com/rest/v1/satellite/visualpasses/25544/" + lat + "/" + lon + "/0/2/300/&apiKey=LDUFJ6-J5J7F4-DCMYRA-3WB7"
+                var queryURL = "https://www.n2yo.com/rest/v1/satellite/visualpasses/25544/" + lat + "/" + lon + "/0/2/300/&apiKey=LDUFJ6-J5J7F4-DCMYRA-3WB7"
 
                 console.log(queryURL);
 
@@ -231,12 +231,12 @@
 
                         var passesCount = response.info.passescount;
                         if (passesCount == 0) {
-                            var newRow = $("<tr>").prepend(
+                            var newRow = $("<tr>").append(
                                 $("<td>").text("There are no visible passes in the next 10 days"),
 
                             );
 
-                            $("tbody").prepend(newRow);
+                            $("tbody").append(newRow);
 
                         } else {
                             // Storing an array of results in the results variable
@@ -272,7 +272,7 @@
                                     $("<td>").text(whereEnd),
                                 );
 
-                                $("tbody").prepend(newRow);
+                                $("tbody").append(newRow);
                             }
                         }
 
