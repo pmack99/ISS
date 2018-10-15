@@ -33,10 +33,6 @@
             <img src="images/iss2.png" width="30" height="30" class="d-inline-block align-top" alt="">
             ISS Tracker
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
         </div>
     </nav>
@@ -387,7 +383,7 @@
                     console.log(i);
 
                     var apod = response.collection.items[i].links[0].href;
-                    var image = $("<img>").attr("src", apod).attr("class", "img-fluid").attr("alt", "Responsive image").attr("class", "float-right").attr("class", "rounded");
+                    var image = $("<img>").attr("src", apod).attr("class", "img").attr("class", "img-fluid").attr("alt", "Responsive image").attr("class", "float-right").attr("class", "rounded");
                     var caption = response.collection.items[i].data[0].description;
 
 

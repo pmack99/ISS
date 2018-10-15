@@ -27,8 +27,8 @@
 
 .container {
   background: none;
-  padding: 10px;
-  margin: 10px;
+  padding: 5px;
+  margin: 5px;
 }
 
 .display-4 {
@@ -71,7 +71,12 @@ h2 {
 
 #apod1{
   margin: 10px;
-  max-height: 100%;
+  max-height: auto;
+  max-width: 100%;
+}
+
+.img {
+  display:block;
   max-width: 100%;
 }
 
@@ -87,14 +92,15 @@ h2 {
   padding-top: 20px;
   padding-bottom: 20px;
   width: auto;
-  margin: 10px;
-  margin-top: 10px;
   background: rgba(200, 200, 200, 0.3);
   border-radius: 25px;
   border: goldenrod solid 1px;
   text-align: center;
   display: block;
   margin-right: auto;
+  margin: 10px;
+  max-height: auto;
+  max-width: 100%;
 }
 
 .navbar{
@@ -112,8 +118,29 @@ h2 {
   border: goldenrod solid 1px;
 }
 
+@media (max-width: 600px){
+  .background{
+    height: 4000px;
+  }
+  .display-4 {
+    font-family: "Questrial", sans-serif;
+    font-size: 30px;
+  }
+  #issInfo{
+    font-size: 15px;
+  }
+  #mapId {
+    height: 600px;
+}
+
+.h2 {
+  font-size: 15px;
+}
 
 
-font-family: "Josefin Sans", sans-serif;
-font-family: "Anton", sans-serif;
-font-family: "Questrial", sans-serif;
+}
+
+
+
+
+
